@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Awesome Github table</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <nav>
+        <h1>Awesome Github table</h1>
+    </nav>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Repo</th>
+                    <th>Stars</th>
+                    <th>Days past from last commit</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for repo in repos %}
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://github.com/{{ repo.full_name }}">{{ repo.full_name }}</a></td>
+                    <td>{{ repo.stars }}</td>
+                    <td>{{ repo.days_last_push }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>

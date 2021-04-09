@@ -1,26 +1,26 @@
 [[package]]
-category = "main"
-description = "File support for asyncio."
 name = "aiofiles"
-optional = false
-python-versions = "*"
 version = "0.6.0"
-
-[[package]]
-category = "dev"
-description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
-name = "appdirs"
+description = "File support for asyncio."
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.4.4"
 
 [[package]]
+name = "appdirs"
+version = "1.4.4"
+description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 category = "dev"
-description = "The uncompromising code formatter."
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "black"
+version = "20.8b1"
+description = "The uncompromising code formatter."
+category = "dev"
 optional = false
 python-versions = ">=3.6"
-version = "20.8b1"
 
 [package.dependencies]
 appdirs = "*"
@@ -37,46 +37,46 @@ colorama = ["colorama (>=0.4.3)"]
 d = ["aiohttp (>=3.3.2)", "aiohttp-cors"]
 
 [[package]]
-category = "main"
-description = "Python package for providing Mozilla's CA Bundle."
 name = "certifi"
+version = "2020.12.5"
+description = "Python package for providing Mozilla's CA Bundle."
+category = "main"
 optional = false
 python-versions = "*"
-version = "2020.12.5"
 
 [[package]]
-category = "main"
-description = "Composable command line interface toolkit"
 name = "click"
+version = "7.1.2"
+description = "Composable command line interface toolkit"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "7.1.2"
 
 [[package]]
-category = "main"
-description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
 name = "fastapi"
+version = "0.63.0"
+description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "0.63.0"
 
 [package.dependencies]
 pydantic = ">=1.0.0,<2.0.0"
 starlette = "0.13.6"
 
 [package.extras]
-all = ["requests (>=2.24.0,<3.0.0)", "aiofiles (>=0.5.0,<0.6.0)", "jinja2 (>=2.11.2,<3.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "itsdangerous (>=1.1.0,<2.0.0)", "pyyaml (>=5.3.1,<6.0.0)", "graphene (>=2.1.8,<3.0.0)", "ujson (>=3.0.0,<4.0.0)", "orjson (>=3.2.1,<4.0.0)", "email_validator (>=1.1.1,<2.0.0)", "uvicorn (>=0.12.0,<0.14.0)", "async_exit_stack (>=1.0.1,<2.0.0)", "async_generator (>=1.10,<2.0.0)"]
-dev = ["python-jose (>=3.1.0,<4.0.0)", "passlib (>=1.7.2,<2.0.0)", "autoflake (>=1.3.1,<2.0.0)", "flake8 (>=3.8.3,<4.0.0)", "uvicorn (>=0.12.0,<0.14.0)", "graphene (>=2.1.8,<3.0.0)"]
+all = ["requests (>=2.24.0,<3.0.0)", "aiofiles (>=0.5.0,<0.6.0)", "jinja2 (>=2.11.2,<3.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "itsdangerous (>=1.1.0,<2.0.0)", "pyyaml (>=5.3.1,<6.0.0)", "graphene (>=2.1.8,<3.0.0)", "ujson (>=3.0.0,<4.0.0)", "orjson (>=3.2.1,<4.0.0)", "email_validator (>=1.1.1,<2.0.0)", "uvicorn[standard] (>=0.12.0,<0.14.0)", "async_exit_stack (>=1.0.1,<2.0.0)", "async_generator (>=1.10,<2.0.0)"]
+dev = ["python-jose[cryptography] (>=3.1.0,<4.0.0)", "passlib[bcrypt] (>=1.7.2,<2.0.0)", "autoflake (>=1.3.1,<2.0.0)", "flake8 (>=3.8.3,<4.0.0)", "uvicorn[standard] (>=0.12.0,<0.14.0)", "graphene (>=2.1.8,<3.0.0)"]
 doc = ["mkdocs (>=1.1.2,<2.0.0)", "mkdocs-material (>=6.1.4,<7.0.0)", "markdown-include (>=0.5.1,<0.6.0)", "mkdocs-markdownextradata-plugin (>=0.1.7,<0.2.0)", "typer-cli (>=0.0.9,<0.0.10)", "pyyaml (>=5.3.1,<6.0.0)"]
-test = ["pytest (5.4.3)", "pytest-cov (2.10.0)", "pytest-asyncio (>=0.14.0,<0.15.0)", "mypy (0.790)", "flake8 (>=3.8.3,<4.0.0)", "black (20.8b1)", "isort (>=5.0.6,<6.0.0)", "requests (>=2.24.0,<3.0.0)", "httpx (>=0.14.0,<0.15.0)", "email_validator (>=1.1.1,<2.0.0)", "sqlalchemy (>=1.3.18,<2.0.0)", "peewee (>=3.13.3,<4.0.0)", "databases (>=0.3.2,<0.4.0)", "orjson (>=3.2.1,<4.0.0)", "async_exit_stack (>=1.0.1,<2.0.0)", "async_generator (>=1.10,<2.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "aiofiles (>=0.5.0,<0.6.0)", "flask (>=1.1.2,<2.0.0)"]
+test = ["pytest (==5.4.3)", "pytest-cov (==2.10.0)", "pytest-asyncio (>=0.14.0,<0.15.0)", "mypy (==0.790)", "flake8 (>=3.8.3,<4.0.0)", "black (==20.8b1)", "isort (>=5.0.6,<6.0.0)", "requests (>=2.24.0,<3.0.0)", "httpx (>=0.14.0,<0.15.0)", "email_validator (>=1.1.1,<2.0.0)", "sqlalchemy (>=1.3.18,<2.0.0)", "peewee (>=3.13.3,<4.0.0)", "databases[sqlite] (>=0.3.2,<0.4.0)", "orjson (>=3.2.1,<4.0.0)", "async_exit_stack (>=1.0.1,<2.0.0)", "async_generator (>=1.10,<2.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "aiofiles (>=0.5.0,<0.6.0)", "flask (>=1.1.2,<2.0.0)"]
 
 [[package]]
-category = "main"
-description = "Reusable utilities for FastAPI"
 name = "fastapi-utils"
+version = "0.2.1"
+description = "Reusable utilities for FastAPI"
+category = "main"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.2.1"
 
 [package.dependencies]
 fastapi = "*"
@@ -84,32 +84,31 @@ pydantic = ">=1.0,<2.0"
 sqlalchemy = ">=1.3.12,<2.0.0"
 
 [[package]]
-category = "main"
-description = "Lightweight in-process concurrent programming"
-marker = "python_version >= \"3\""
 name = "greenlet"
+version = "1.0.0"
+description = "Lightweight in-process concurrent programming"
+category = "main"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
-version = "1.0.0"
 
 [package.extras]
 docs = ["sphinx"]
 
 [[package]]
-category = "main"
-description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
 name = "h11"
+version = "0.12.0"
+description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "0.12.0"
 
 [[package]]
-category = "main"
-description = "A minimal low-level HTTP client."
 name = "httpcore"
+version = "0.12.3"
+description = "A minimal low-level HTTP client."
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "0.12.3"
 
 [package.dependencies]
 h11 = "<1.0.0"
@@ -119,41 +118,38 @@ sniffio = ">=1.0.0,<2.0.0"
 http2 = ["h2 (>=3,<5)"]
 
 [[package]]
-category = "main"
-description = "The next generation HTTP client."
 name = "httpx"
+version = "0.17.1"
+description = "The next generation HTTP client."
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "0.17.1"
 
 [package.dependencies]
 certifi = "*"
 httpcore = ">=0.12.1,<0.13"
+rfc3986 = {version = ">=1.3,<2", extras = ["idna2008"]}
 sniffio = "*"
-
-[package.dependencies.rfc3986]
-extras = ["idna2008"]
-version = ">=1.3,<2"
 
 [package.extras]
 brotli = ["brotlipy (>=0.7.0,<0.8.0)"]
 http2 = ["h2 (>=3.0.0,<4.0.0)"]
 
 [[package]]
-category = "main"
-description = "Internationalized Domain Names in Applications (IDNA)"
 name = "idna"
+version = "3.1"
+description = "Internationalized Domain Names in Applications (IDNA)"
+category = "main"
 optional = false
 python-versions = ">=3.4"
-version = "3.1"
 
 [[package]]
-category = "main"
-description = "A very fast and expressive template engine."
 name = "jinja2"
+version = "2.11.3"
+description = "A very fast and expressive template engine."
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "2.11.3"
 
 [package.dependencies]
 MarkupSafe = ">=0.23"
@@ -162,20 +158,20 @@ MarkupSafe = ">=0.23"
 i18n = ["Babel (>=0.8)"]
 
 [[package]]
-category = "main"
-description = "Safely add untrusted strings to HTML/XML markup."
 name = "markupsafe"
+version = "1.1.1"
+description = "Safely add untrusted strings to HTML/XML markup."
+category = "main"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-version = "1.1.1"
 
 [[package]]
-category = "dev"
-description = "Optional static typing for Python"
 name = "mypy"
+version = "0.812"
+description = "Optional static typing for Python"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
-version = "0.812"
 
 [package.dependencies]
 mypy-extensions = ">=0.4.3,<0.5.0"
@@ -186,30 +182,31 @@ typing-extensions = ">=3.7.4"
 dmypy = ["psutil (>=4.0)"]
 
 [[package]]
-category = "dev"
-description = "Experimental type system extensions for programs checked with the mypy typechecker."
 name = "mypy-extensions"
+version = "0.4.3"
+description = "Experimental type system extensions for programs checked with the mypy typechecker."
+category = "dev"
 optional = false
 python-versions = "*"
-version = "0.4.3"
 
 [[package]]
-category = "dev"
-description = "Utility library for gitignore style pattern matching of file paths."
 name = "pathspec"
+version = "0.8.1"
+description = "Utility library for gitignore style pattern matching of file paths."
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "0.8.1"
 
 [[package]]
-category = "main"
-description = "Data validation and settings management using python 3.6 type hinting"
 name = "pydantic"
+version = "1.8.1"
+description = "Data validation and settings management using python 3.6 type hinting"
+category = "main"
 optional = false
 python-versions = ">=3.6.1"
-version = "1.8.1"
 
 [package.dependencies]
+python-dotenv = {version = ">=0.10.4", optional = true, markers = "extra == \"dotenv\""}
 typing-extensions = ">=3.7.4.3"
 
 [package.extras]
@@ -217,68 +214,75 @@ dotenv = ["python-dotenv (>=0.10.4)"]
 email = ["email-validator (>=1.0.3)"]
 
 [[package]]
-category = "main"
-description = "Extensions to the standard Python datetime module"
 name = "python-dateutil"
+version = "2.8.1"
+description = "Extensions to the standard Python datetime module"
+category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
-version = "2.8.1"
 
 [package.dependencies]
 six = ">=1.5"
 
 [[package]]
-category = "dev"
-description = "Alternative regular expression module, to replace re."
-name = "regex"
+name = "python-dotenv"
+version = "0.17.0"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+category = "main"
 optional = false
 python-versions = "*"
-version = "2021.4.4"
+
+[package.extras]
+cli = ["click (>=5.0)"]
 
 [[package]]
-category = "main"
-description = "Validating URI References per RFC 3986"
-name = "rfc3986"
+name = "regex"
+version = "2021.4.4"
+description = "Alternative regular expression module, to replace re."
+category = "dev"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "rfc3986"
 version = "1.4.0"
+description = "Validating URI References per RFC 3986"
+category = "main"
+optional = false
+python-versions = "*"
 
 [package.dependencies]
-[package.dependencies.idna]
-optional = true
-version = "*"
+idna = {version = "*", optional = true, markers = "extra == \"idna2008\""}
 
 [package.extras]
 idna2008 = ["idna"]
 
 [[package]]
-category = "main"
-description = "Python 2 and 3 compatibility utilities"
 name = "six"
+version = "1.15.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "1.15.0"
 
 [[package]]
-category = "main"
-description = "Sniff out which async library your code is running under"
 name = "sniffio"
+version = "1.2.0"
+description = "Sniff out which async library your code is running under"
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "1.2.0"
 
 [[package]]
-category = "main"
-description = "Database Abstraction Library"
 name = "sqlalchemy"
+version = "1.4.7"
+description = "Database Abstraction Library"
+category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
-version = "1.4.7"
 
 [package.dependencies]
-[package.dependencies.greenlet]
-python = ">=3"
-version = "!=0.4.17"
+greenlet = {version = "!=0.4.17", markers = "python_version >= \"3\""}
 
 [package.extras]
 aiomysql = ["greenlet (!=0.4.17)", "aiomysql"]
@@ -301,58 +305,59 @@ pymysql = ["pymysql (<1)", "pymysql"]
 sqlcipher = ["sqlcipher3-binary"]
 
 [[package]]
-category = "main"
-description = "The little ASGI library that shines."
 name = "starlette"
+version = "0.13.6"
+description = "The little ASGI library that shines."
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "0.13.6"
 
 [package.extras]
 full = ["aiofiles", "graphene", "itsdangerous", "jinja2", "python-multipart", "pyyaml", "requests", "ujson"]
 
 [[package]]
-category = "dev"
-description = "Python Library for Tom's Obvious, Minimal Language"
 name = "toml"
+version = "0.10.2"
+description = "Python Library for Tom's Obvious, Minimal Language"
+category = "dev"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "0.10.2"
 
 [[package]]
-category = "dev"
-description = "a fork of Python 2 and 3 ast modules with type comment support"
 name = "typed-ast"
-optional = false
-python-versions = "*"
 version = "1.4.2"
+description = "a fork of Python 2 and 3 ast modules with type comment support"
+category = "dev"
+optional = false
+python-versions = "*"
 
 [[package]]
-category = "main"
-description = "Backported and Experimental Type Hints for Python 3.5+"
 name = "typing-extensions"
+version = "3.7.4.3"
+description = "Backported and Experimental Type Hints for Python 3.5+"
+category = "main"
 optional = false
 python-versions = "*"
-version = "3.7.4.3"
 
 [[package]]
-category = "main"
-description = "The lightning-fast ASGI server."
 name = "uvicorn"
+version = "0.13.4"
+description = "The lightning-fast ASGI server."
+category = "main"
 optional = false
 python-versions = "*"
-version = "0.13.4"
 
 [package.dependencies]
 click = ">=7.0.0,<8.0.0"
 h11 = ">=0.8"
 
 [package.extras]
-standard = ["websockets (>=8.0.0,<9.0.0)", "watchgod (>=0.6)", "python-dotenv (>=0.13)", "PyYAML (>=5.1)", "httptools (>=0.1.0,<0.2.0)", "uvloop (>=0.14.0,<0.15.0 || >0.15.0,<0.15.1 || >0.15.1)", "colorama (>=0.4)"]
+standard = ["websockets (>=8.0.0,<9.0.0)", "watchgod (>=0.6)", "python-dotenv (>=0.13)", "PyYAML (>=5.1)", "httptools (>=0.1.0,<0.2.0)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "colorama (>=0.4)"]
 
 [metadata]
-content-hash = "b11f24af3c57dd745cef3896b0c086443eb0d02666963bfec25598e77fccbe44"
+lock-version = "1.1"
 python-versions = "^3.8"
+content-hash = "7c492c63964262daaa3ea349f30e06a10ce5efba8e398e51b6e5539866980f94"
 
 [metadata.files]
 aiofiles = [
@@ -561,6 +566,10 @@ python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
     {file = "python_dateutil-2.8.1-py2.py3-none-any.whl", hash = "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"},
 ]
+python-dotenv = [
+    {file = "python-dotenv-0.17.0.tar.gz", hash = "sha256:471b782da0af10da1a80341e8438fca5fadeba2881c54360d5fd8d03d03a4f4a"},
+    {file = "python_dotenv-0.17.0-py2.py3-none-any.whl", hash = "sha256:49782a97c9d641e8a09ae1d9af0856cc587c8d2474919342d5104d85be9890b2"},
+]
 regex = [
     {file = "regex-2021.4.4-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:619d71c59a78b84d7f18891fe914446d07edd48dc8328c8e149cbe0929b4e000"},
     {file = "regex-2021.4.4-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:47bf5bf60cf04d72bf6055ae5927a0bd9016096bf3d742fa50d9bf9f45aa0711"},
@@ -617,10 +626,39 @@ sniffio = [
     {file = "sniffio-1.2.0.tar.gz", hash = "sha256:c4666eecec1d3f50960c6bdf61ab7bc350648da6c126e3cf6898d8cd4ddcd3de"},
 ]
 sqlalchemy = [
+    {file = "SQLAlchemy-1.4.7-cp27-cp27m-macosx_10_14_x86_64.whl", hash = "sha256:e9c2aaaa9738ba3334262734bd25d9b2d6ea446400f815bbdea17571b9e6d8fb"},
     {file = "SQLAlchemy-1.4.7-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:94fece3fdc777fbf37378513414bcf19ae89e1b598edf33d957a2898991d714f"},
+    {file = "SQLAlchemy-1.4.7-cp27-cp27m-win32.whl", hash = "sha256:58075eab5e32daf51e637ac88c63057c3a5e84602cfeb30db4258838ef6f7a2b"},
+    {file = "SQLAlchemy-1.4.7-cp27-cp27m-win_amd64.whl", hash = "sha256:8df743c79181ecc6aadaf10569d452ef3eda06764fe0adc4ea981a48c01e1ad5"},
+    {file = "SQLAlchemy-1.4.7-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:bb69a2d93c1a98a8d4ca24a8012ade4b771087dddbe077ad4ef4911d7f17185d"},
     {file = "SQLAlchemy-1.4.7-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:d10117c9ce096bd6fb9a13c6fad274982f7889028e22a05719a6d219e2cf977e"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:abf18c62c4740d7199e443537066904789052d6d165cb279eb91bea35ea42ec4"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:8672ff62c9d48f62aa17bb806a591cdfed801d139eecbcf9224bffb80f6fdc30"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:8ecabd4cead9a582e2ffa7a3918bc31155d5c24b1fd16ed617171f913c438da1"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-manylinux2014_x86_64.whl", hash = "sha256:e98934855337d76aa7726f444b0fa597a462271a95d01bc050644d88e1ee5aae"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-win32.whl", hash = "sha256:6adb07e199781457b75f4773e63577a2898f95141f030b956a2a186055f24e76"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-win_amd64.whl", hash = "sha256:d81a68df4f3eee490b66ba990648d3c77cbf2475291ef92aa4e05ef541ecfd66"},
     {file = "SQLAlchemy-1.4.7-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:ef6d98d5b51eb826516499429e059872b61e272cb44630ca8de87650242d07d8"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:d5ef5619d421f8a86af874f867d17d823cd970ad0f2ae7c30723beb16922b4d6"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:c74310f13e5a113ef658345e2cedf9aa1fcb8b9a588e07d54c083c7fc71edf42"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:069fcda89c7d168382f674b5b566643f1420e4e7704c00cced2579675deb4eed"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:673cb375deb17e1561340710f428b33c27a11980d991a2ac88d7bf1c623faa0b"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-win32.whl", hash = "sha256:aea57c7a5a4135abc10f81ce433b23325cbb9648a5dcb0ac1af1cdd413f7d0cb"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-win_amd64.whl", hash = "sha256:6913ea108e7583f2d7ba4bc9cf4f2b1e0cdacf7e66e4cdc04192f870e64306ff"},
     {file = "SQLAlchemy-1.4.7-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:72152b64508dd807ba2a26d9dfc4da450d0ba1808c9f96ddbc397c435735fac3"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:9de4c84ea180c07f1d4010db2cfdbf9fe67bf7caafcfb1053644c8c03bfa3fd0"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:89860d594cb3256718d74ff7406a405a890eac71bcc044b3ba6868850d934a48"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:5d84442d85491dc473bf99f4d90ad45dd2e5539743f4d1216b15ba26575ba572"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-manylinux2014_x86_64.whl", hash = "sha256:fdd1e4ed5d526aa4c7a01ed2157d01f0234eaecdb04b1c3b5084d0902986be9f"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-win32.whl", hash = "sha256:3a022a7985a49cacf21e2a73bab083e4852943466d250d932554650d705fcc62"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-win_amd64.whl", hash = "sha256:a7f450cbab9670949e7d9f0eac1dd93eaaffce319608bf4b863f0b751decef42"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:2bfadb3279f51252565baed9aa071c1bef875fcde60bf4a172136289ac208804"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:1d1172a9e5ead90d9299ccad8c5eecf40372a3721ff82fc4b4ee42835baf4659"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:bea07faab746743c8d82650b51129ff2705d53a0094161cfa6145e7ce77b9644"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:a3a40d2a0cb2ca2886f8f2fe768e83aeca489a162c8233974b9b2e429827ed85"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:50b1cb7c9f6f0bbc68c06453d66d4a34ca75ba60bce61d49bf007edfd2621d0a"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-win32.whl", hash = "sha256:d26d8a3865c9f33d7b3b356a577c7f26c499a9f080ae33e4282a65a8a2170cef"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-win_amd64.whl", hash = "sha256:606ac6a7640cc642fd53c5e693c560ad9fc21ef97aa7e799eb96b6d7f28ad723"},
     {file = "SQLAlchemy-1.4.7.tar.gz", hash = "sha256:84115f97d88c8ccf26db81b7997c5f5de9ae360e0785ef859d0987794495f0a9"},
 ]
 starlette = [
