@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Jost', sans-serif;
+  background-color: #EEEEEE;
+}
+
+nav {
+    background-color: rgb(216, 216, 216);
+}

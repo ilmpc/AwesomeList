@@ -1,0 +1,33 @@
+<html class="has-navbar-fixed-top">
+
+<head>
+	<title>Item Details</title>
+    <link rel="stylesheet" href="/static/styles.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+</head>
+
+<body>
+	<nav class="navbar is-fixed-top">
+	    <h1>Awesome Github table</h1>
+    </nav>
+	<table class="container table is-bordered">
+		<thead>
+			<tr>
+				<th>Repo</th>
+				<th>Stars</th>
+				<th>Days past from last commit</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for repo in repos %}
+			<tr>
+				<td>{{ repo["name"] }}</td>
+				<td>{{ repo["stars"] }}</td>
+				<td>{{ repo["days_from_push"] }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+
+</html>
