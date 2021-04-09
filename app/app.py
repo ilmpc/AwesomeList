@@ -8,7 +8,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
-data = [{"name": "repo_name", "stars": 100, "push_date": dt.datetime(2020, 11, 29)}]
+data = [{"name": "ilmpc/Algorithms", "stars": 100, "push_date": dt.datetime(2020, 11, 29)}]
 
 
 @app.get("/alive")
@@ -25,3 +25,4 @@ async def index(request: Request, star_ascending: bool = True):
     return templates.TemplateResponse(
         "index.html", {"request": request, "repos": prepared_data}
     )
+

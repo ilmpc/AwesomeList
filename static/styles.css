@@ -7,8 +7,14 @@ body {
   flex-direction: column;
   font-family: 'Jost', sans-serif;
   background-color: #EEEEEE;
+  padding-top: 1em;
 }
 
-nav {
-    background-color: rgb(216, 216, 216);
+nav.navbar {
+    background-color: rgb(202, 202, 202);
+    text-align: center;
+}
+
+nav.navbar h1 {
+    font-size: 2em;    
 }

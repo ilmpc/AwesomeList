@@ -1,9 +1,9 @@
 <html class="has-navbar-fixed-top">
 
 <head>
-	<title>Item Details</title>
-    <link rel="stylesheet" href="/static/styles.css">
+	<title>Awesome Github table</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 		<tbody>
 			{% for repo in repos %}
 			<tr>
-				<td>{{ repo["name"] }}</td>
+				<td><a target="_blank" href="https://github.com/{{ repo["name"] }}">{{ repo["name"] }}</a></td>
 				<td>{{ repo["stars"] }}</td>
 				<td>{{ repo["days_from_push"] }}</td>
 			</tr>
