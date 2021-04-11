@@ -40,7 +40,9 @@ async def fetch_awesome_list(client: httpx.Client, repo_full_name: str) -> str:
 
 
 async def get_data():
-    headers = {"Authorization": f"token {settings.TOKEN}"} if settings.TOKEN else {}
+    headers = {"User-Agent": settings.APP_NAME}
+    if settings.TOKEN:
+        headers["Authorization"] = f"token {settings.TOKEN}"
 
     async with httpx.AsyncClient(headers=headers) as client:
         r = await fetch_awesome_list(client, settings.AWESOME_REPO)
