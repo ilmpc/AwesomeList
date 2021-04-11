@@ -13,18 +13,33 @@
         <table>
             <thead>
                 <tr>
-                    <th>Repo</th>
-                    <th>Stars</th>
-                    <th>Days past from last commit</th>
+                    <th>
+                        <a href="?sort_by=name&ascending={{ not ascending }}">
+                            Repo {% if sort_by == "name" %} {{"▲" if ascending else "▼" }} {% endif %}
+                        </a>
+                    </th>
+                    <th>
+                        <a href="?sort_by=stars&ascending={{ not ascending }}">
+                            Stars {% if sort_by == "stars" %} {{"▲" if ascending else "▼" }} {% endif %}
+                        </a>
+                    </th>
+                    <th>
+                        <a href="?sort_by=days&ascending={{ not ascending }}">
+                            Days past from last commit {% if sort_by == "days" %} {{"▲" if ascending else "▼" }} {% endif %}
+                        </a>
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 {% for repo in repos %}
                 <tr>
                     <td>
-                        <a target="_blank" href="https://github.com/{{ repo.full_name }}">{{ repo.full_name }}</a></td>
+                        <a target="_blank" href="https://github.com/{{ repo.full_name }}">
+                            {{ repo.full_name }}
+                        </a>
+                    </td>
                     <td>{{ repo.stars }}</td>
-                    <td>{{ repo.days_last_push }}</td>
+                    <td>{{ (now - repo.last_push).days }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

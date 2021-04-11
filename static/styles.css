@@ -21,6 +21,13 @@ td {
     text-align: center;
 }
 
+table th > a {
+    color: black;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 nav.navbar {
     background-color: rgb(202, 202, 202);
     text-align: center;
