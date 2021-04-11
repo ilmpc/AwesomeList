@@ -60,8 +60,8 @@ async def index(
 async def update_cache():
     global data
     now = dt.datetime.now(dt.timezone.utc)
-    if Path(settings.cache_file).is_file():
-        async with aiofiles.open(settings.cache_file) as cache:
+    if Path(settings.CACHE_FILE).is_file():
+        async with aiofiles.open(settings.CACHE_FILE) as cache:
             try:
                 cache_data = Repos.parse_raw(await cache.read())
                 if now - cache_data.update_time < dt.timedelta(hours=12):
@@ -71,7 +71,7 @@ async def update_cache():
                 pass
 
     data = await get_data()
-    async with aiofiles.open(settings.cache_file, mode="w") as cache:
+    async with aiofiles.open(settings.CACHE_FILE, mode="w") as cache:
         cache_data = Repos(update_time=now, data=data)
         await cache.write(cache_data.json())
 

@@ -40,9 +40,10 @@ async def fetch_awesome_list(client: httpx.Client, repo_full_name: str) -> str:
 
 
 async def get_data():
-    headers = {"Authorization": f"token {settings.token}"}
+    headers = {"Authorization": f"token {settings.TOKEN}"} if settings.TOKEN else {}
+
     async with httpx.AsyncClient(headers=headers) as client:
-        r = await fetch_awesome_list(client, "vinta/awesome-python")
+        r = await fetch_awesome_list(client, settings.AWESOME_REPO)
         return [
             await fetch_repo(client, full_name) for full_name in parse_links(r.text)
         ]
